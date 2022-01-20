@@ -1,10 +1,23 @@
 import "./App.css";
+import React from "react";
+import Data from "./data.json";
+import Card from "./components/Card/Card";
 
 function App() {
+  //state variables
+  const [cardInfo, setCardInfo] = React.useState(Data);
 
-// make a set of 6 cards c soft-coded values
+  const cardElements = cardInfo.map((i) => {
+    return (
+      <Card
+        activity={i.title}
+        value={i.timeframes.daily.current}
+        previous={i.timeframes.daily.previous}
+      />
+    );
+  });
 
-  return <div className="App"></div>;
+  return <div id="App">{cardElements}</div>;
 }
 
 export default App;
