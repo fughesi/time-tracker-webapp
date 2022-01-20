@@ -1,14 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
 
-      </header>
-    </div>
-  );
+// make a set of 6 cards c soft-coded values
+
+  return <div className="App"></div>;
 }
 
 export default App;
