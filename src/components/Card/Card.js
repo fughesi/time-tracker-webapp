@@ -1,16 +1,17 @@
 import React from "react";
 import Ellipsis from "../../images/Ellipsis";
 import Work from "../../images/Work";
+import workIcon from "../../images/oldIcons/icon-work.svg";
 import "./Card.css";
 
 export default function Card(props) {
   return (
-    <main>
-        <section id="cardTop">
-          <Work />
-        </section>
-      <div id="mainCardContainer">
+    <main id="wrap">
+      <section id="cardTop">
+        <img src={workIcon} alt="work icon" id="work" />
+      </section>
 
+      {/* <div id="mainCardContainer">
         <section id="topCardColor">
           <div id="svg"></div>
         </section>
@@ -30,7 +31,7 @@ export default function Card(props) {
             <span id="hours">36hrs</span>
           </h6>
         </section>
-      </div>
+      </div> */}
     </main>
   );
 }

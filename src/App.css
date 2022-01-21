@@ -19,6 +19,7 @@ VARIABLES
   --pale: hsl(236, 100%, 87%);
 
   /* Typography   */
+  --step--4: clamp(0.63rem, 0.64rem + -0.04vw, 0.61rem);
   --step--3: clamp(0.76rem, 0.76rem + 0.02vw, 0.77rem);
   --step--2: clamp(0.91rem, 0.89rem + 0.1vw, 0.96rem);
   --step--1: clamp(1.09rem, 1.05rem + 0.21vw, 1.2rem);
@@ -39,8 +40,6 @@ VARIABLES
 *::before,
 *::after {
   box-sizing: border-box;
-
-  /* flex: 0 0 auto; */
 }
 
 body {
@@ -68,7 +67,7 @@ body {
   width: 80%;
 
   display: grid;
-  gap: 1.5rem;
+  gap: 3.5rem 1.5rem;
   grid-template: repeat(2, 1fr) / repeat(4, 1fr);
 }
 
