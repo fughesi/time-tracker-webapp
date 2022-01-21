@@ -2,42 +2,64 @@
 VARIABLES
 *********/
 :root {
-
   /* colors */
   --BG: hsl(246, 80%, 60%);
-  
+
   --work: hsl(15, 100%, 70%);
   --play: hsl(195, 74%, 62%);
   --study: hsl(348, 100%, 68%);
   --exercise: hsl(145, 58%, 55%);
   --social: hsl(264, 64%, 52%);
   --selfCare: hsl(43, 84%, 65%);
-  
+
   /* blues */
   --veryDark: hsl(226, 43%, 10%);
   --dark: hsl(235, 46%, 20%);
   --desaturated: hsl(235, 45%, 61%);
   --pale: hsl(236, 100%, 87%);
-  
+
   /* Typography   */
   --reg: 18px;
-  
+
+  /* weights */
+  --thin: 300;
+  --med: 400;
+  --thick: 500;
 }
-
-
 
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
 
   font-family: "Rubik", sans-serif;
+  font-weight: var(--thin);
+  background: var(--veryDark);
 }
 
 #App {
+  height: 100vh;
+  width: 100vw;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#AppWrap {
+  height: 50%;
+  width: 80%;
+
   display: grid;
   gap: 1.5rem;
   grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+
+#reportCardContainer {
+  grid-row: 1 / span 2;
 }

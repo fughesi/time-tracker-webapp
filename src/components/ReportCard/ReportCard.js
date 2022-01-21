@@ -1,5 +1,22 @@
-import React from 'react';
+import React from "react";
+import './ReportCard.css'
+import UserImg from "../../images/image-jeremy.png";
 
-export default function ReportCard() {
-  return <div></div>;
+export default function ReportCard(props) {
+  return (
+    <div id="reportCardContainer">
+      <section id="userContainer">
+        <img src={UserImg} alt="this guy" />
+        <p>Report for</p>
+        <h2>Jeremy</h2>
+        <h2>Robson</h2>
+      </section>
+
+      <section id="timeFrameContainer">
+        <h6 onClick={props.handleClick}>Daily</h6>
+        <h6 onClick={props.handleClick}>Weekly</h6>
+        <h6 onClick={props.handleClick}>Monthly</h6>
+      </section>
+    </div>
+  );
 }

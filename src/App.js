@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import Data from "./data.json";
 import Card from "./components/Card/Card";
+import ReportCard from "./components/ReportCard/ReportCard";
 
 function App() {
   //state variables
@@ -17,7 +18,14 @@ function App() {
     );
   });
 
-  return <div id="App">{cardElements}</div>;
+  return (
+    <div id="App">
+      <div id="AppWrap">
+        <ReportCard />
+        {cardElements}
+      </div>
+    </div>
+  );
 }
 
 export default App;

@@ -1,1 +1,37 @@
 @import "../../App.css";
+
+#reportCardContainer {
+  height: 100%;
+}
+
+#userContainer,
+#timeFrameContainer {
+    width: 85%;
+}
+
+#userContainer {
+  height: 75%;
+  border-radius: 10px;
+  background: var(--BG);
+  position: relative;
+  z-index: 1;
+
+  box-shadow: 0 0 15px #0006;
+}
+
+#userContainer img {
+  width: 70px;
+  border-radius: 50%;
+  border: 0.2em solid #fff;
+}
+
+#timeFrameContainer {
+  display: flex;
+  flex-direction: column;
+
+  z-index: -1;
+  margin-top: -80px;
+
+  border-radius: 10px;
+  background: var(--dark);
+}
