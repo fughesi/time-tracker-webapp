@@ -12,8 +12,9 @@
 
 #mainCardContainer {
   position: relative;
-  width: 100%;
+  width: clamp(220px, 100%, 270px);
   height: 100%;
+  /* width: minmax(240, 247); */
 
   background: var(--dark);
   border-radius: 10px;
@@ -28,8 +29,31 @@
     "c c"
     "d d";
 }
+
+#mainCardContainer h3 {
+    margin: 0 0 .5rem 0;
+    
+    font-weight: var(--thin);
+    font-size: var(--step--1);
+}
+
+#mainCardContainer h1 {
+    margin: 0;
+    padding: 0;
+
+    font-weight: var(--thin);
+    font-size: var(--step-5);
+}
+
+#mainCardContainer h6 {
+    margin: 0;
+
+    font-weight: var(--thin);
+    font-size: var(--step--2);
+}
+
 #cardTop {
-    z-index: -1;
+  z-index: -1;
   grid-area: a;
   width: 100%;
   height: 65px;
