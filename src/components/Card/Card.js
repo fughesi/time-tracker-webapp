@@ -1,24 +1,17 @@
 import React from "react";
-import Ellipsis from "../../images/Ellipsis";
-import Work from "../../images/Work";
+import Ellipsis from "../../images/oldIcons/icon-ellipsis.svg";
 import workIcon from "../../images/oldIcons/icon-work.svg";
 import "./Card.css";
 
 export default function Card(props) {
   return (
-    <main id="wrap">
-      <section id="cardTop">
-        <img src={workIcon} alt="work icon" id="work" />
-      </section>
+    <main id="mainCardContainer">
+      <div id="cardTop"></div>
 
-      <div id="mainCardContainer">
-        <section id="topCardColor">
-          <div id="svg"></div>
-        </section>
-
+      <div id="cardBottom">
         <section id="cardContainer">
           <h3>{props.activity}</h3>
-          <Ellipsis id="ellipsis" />
+          <img src={Ellipsis} alt="Ellipsis" id="Ellipsis" />
         </section>
 
         <section id="valueContainer">

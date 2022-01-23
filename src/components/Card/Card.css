@@ -1,36 +1,28 @@
 @import "../../App.css";
 
-#mainCardContainer,
-#cardContainer,
-#valueContainer,
-#timeContainer {
-  width: 80%;
-  height: 100%;
-
-  font-weight: 300;
-}
-
 #mainCardContainer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
   background: var(--dark);
   border-radius: 10px;
   color: #fff;
 
   display: grid;
   place-items: center;
-  grid-template: 1fr, 2fr, 1fr / repeat(2, 1fr);
+  grid-template: 40px 170px / repeat(2, 1fr);
   grid-template-areas:
     "a a"
-    "b b"
-    "c c"
-    "d d";
+    "b b";
+}
+
+#mainCardContainer:hover {
+  cursor: pointer;
+}
+
+#mainCardContainer:active {
+  background: var(--desaturated);
 }
 
 #mainCardContainer h3 {
-  margin: 0 0 -10px 0;
+  margin: 0 0 0px 0;
 
   font-weight: var(--thin);
   font-size: var(--step--1);
@@ -51,49 +43,62 @@
   font-size: var(--step--2);
 }
 
-#wrap {
-  width: 100%;
-  position: relative;
+/* #Ellipsis {
+  fill: green;
 }
 
-#cardTop {
-  /* height: clamp(400px,50%,800px); */
-  z-index: -1;
-  grid-area: a;
-  
-  overflow: hidden;
-  position: absolute;
-  top: -30px;
+#Ellipsis:hover {
+  fill: green;
+  color: #fff;
+  transform: scale(1.5);
+} */
 
+#cardTop {
+  grid-area: a;
+  position: relative;
+  z-index: 2;
+
+  height: 40px;
   width: 100%;
-  height: 100px;
   display: flex;
   justify-content: right;
-  flex-basis: 0;
-
   border-radius: 10px 10px 0 0;
+
+  background-image: url("../../images/oldIcons/icon-work.svg");
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: 90% 10%;
+  background-size: 60px 60px;
   background-color: var(--work);
 }
 
-#work {
-  transform: translate(0, -20%) scale(.75);
+#cardBottom {
+  grid-area: b;
+
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
 }
 
 #cardContainer {
-  grid-area: b;
+  height: 20%;
   display: flex;
   align-items: baseline;
+
   justify-content: space-between;
+  border-radius: 10px 10px 0 0;
 }
 
-#valueContainer {
-  grid-area: c;
-  display: flex;
+#valueContainer h1 {
+  padding: 1.5rem 0 1rem 0;
+  font-size: var(--step-3);
+}
+
+#cardContainer h3 {
+  font-weight: var(--thick);
 }
 
 #timeContainer {
-  grid-area: d;
-  display: flex;
-
+  padding: 0.75rem 0 0 0;
   color: var(--pale);
 }
