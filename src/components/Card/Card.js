@@ -11,7 +11,7 @@ export default function Card(props) {
         <img src={workIcon} alt="work icon" id="work" />
       </section>
 
-      {/* <div id="mainCardContainer">
+      <div id="mainCardContainer">
         <section id="topCardColor">
           <div id="svg"></div>
         </section>
@@ -31,7 +31,7 @@ export default function Card(props) {
             <span id="hours">36hrs</span>
           </h6>
         </section>
-      </div> */}
+      </div>
     </main>
   );
 }

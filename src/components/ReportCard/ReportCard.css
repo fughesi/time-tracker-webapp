@@ -10,7 +10,7 @@
 #timeFrameContainer {
   display: flex;
   flex-direction: column;
-  padding: 1.25rem;
+  padding: 1.5rem;
 }
 
 #userContainer {
@@ -49,7 +49,8 @@
 }
 
 #timeFrameContainer {
-  position: absolute;
+  /* position: absolute; */
+  transform: translateY(202px);
   bottom: 0px;
   width: 100%;
 
@@ -67,14 +68,20 @@
 }
 
 #timeFrameContainer h6 {
-  margin: .75em 0;
+  margin: 0.75em 0;
 
   color: var(--pale);
   font-weight: var(--med);
   font-size: var(--step--2);
 }
 
-#timeFrameContainer h6:hover {
-  cursor: pointer;
+#timeFrameContainer h6:active {
   color: #fff;
+  cursor: pointer;
+}
+
+#timeFrameContainer h6:hover,
+#timeFrameContainer h6:focus {
+  color: #fff;
+  cursor: pointer;
 }
