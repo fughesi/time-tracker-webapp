@@ -11,7 +11,14 @@ export default function Card(props) {
       <div id="cardBottom">
         <section id="cardContainer">
           <h3>{props.activity}</h3>
-          <img src={Ellipsis} alt="Ellipsis" id="Ellipsis" />
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+              id="Ellipsis"
+            />
+          </svg>
         </section>
 
         <section id="valueContainer">
