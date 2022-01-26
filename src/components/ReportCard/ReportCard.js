@@ -13,9 +13,9 @@ export default function ReportCard(props) {
       </section>
 
       <section id="timeFrameContainer">
-        <h6 onClick={props.handleClick}>Daily</h6>
-        <h6 onClick={props.handleClick}>Weekly</h6>
-        <h6 onClick={props.handleClick}>Monthly</h6>
+        <h6 onClick={(e)=>props.handleClick(e)} key="1">Daily</h6>
+        <h6 onClick={(e)=>props.handleClick(e)} key="2">Weekly</h6>
+        <h6 onClick={(e)=>props.handleClick(e)} key="3">Monthly</h6>
       </section>
     </div>
   );
