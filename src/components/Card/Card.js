@@ -1,6 +1,4 @@
 import React from "react";
-import Ellipsis from "../../images/oldIcons/icon-ellipsis.svg";
-import workIcon from "../../images/oldIcons/icon-work.svg";
 import "./Card.css";
 
 export default function Card(props) {

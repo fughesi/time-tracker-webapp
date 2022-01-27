@@ -21,17 +21,15 @@ function App() {
 
   // making all of the card elements
   const cardElements = cardInfo.map((i) => {
-    
-
     return (
       <Card
         key={nanoid}
-        icon={BGArr[1]} //trying to loop through all my icons.svg
+        icon={BGArr[i]} //trying to loop through all my icons.svg
         activity={i.title}
         time={time}
         selected={selected}
-        current={i.timeframes.weekly.current}
-        previous={i.timeframes.weekly.previous}
+        current={i.timeframes.weekly.current} //need to softcode this
+        previous={i.timeframes.weekly.previous} //need to softcode this
       />
     );
   });
