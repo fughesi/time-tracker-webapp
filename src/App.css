@@ -72,3 +72,34 @@ body {
     "a b b b"
     "a b b b";
 }
+
+/************ 
+MEDIA QUERIES 
+*************/
+
+@media (max-width: 350px) {
+  #AppWrap {
+    height: 100vh;
+    gap: 1.5rem;
+    grid-template: 200px repeat(6, 157px) / 250px;
+    grid-template-areas:
+      "a"
+      "b"
+      "b"
+      "b"
+      "b"
+      "b"
+      "b";
+  }
+  #userContainer {
+    max-height: 131px;
+  }
+  #userContainer img {
+    height: 69px;
+  }
+  #userContainer,
+  #timeFrameContainer {
+    flex-direction: row;
+    padding: 1.25rem;
+  }
+}
