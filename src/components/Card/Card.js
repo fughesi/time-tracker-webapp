@@ -1,12 +1,24 @@
 import React from "react";
-// import Ellipsis from "../../images/oldIcons/icon-ellipsis.svg";
-// import workIcon from "../../images/oldIcons/icon-work.svg";
+import Ellipsis from "../../images/oldIcons/icon-ellipsis.svg";
+import workIcon from "../../images/oldIcons/icon-work.svg";
 import "./Card.css";
 
 export default function Card(props) {
+  const prevTimeframe = "";
+  if (props.time === "Daily") {
+    return "Yesterday";
+  } else if (props.time === "Weekly") {
+    return "Last Week";
+  } else if (props.time === "Monthly") {
+    return "Last Month";
+  }
+
+  console.log(props.icon)
+
   return (
     <main id="mainCardContainer">
-      <div id="cardTop"></div>
+      <div id="cardTop">
+      </div>
 
       <div id="cardBottom">
         <section id="cardContainer">
@@ -18,18 +30,19 @@ export default function Card(props) {
               fillRule="evenodd"
             />
           </svg>
-          {/* <img src={Ellipsis} alt="Ellipsis" id="Ellipsis" /> */}
         </section>
 
         <section id="valueContainer">
-          <h1>{props.value}hrs</h1>
+          <h1>{props.current}hrs</h1>
         </section>
 
         <section id="timeContainer">
-          <h6>
-            <span id="time">{props.previous}</span> -{" "}
-            <span id="hours">36hrs</span>
-          </h6>
+          {props.time && (
+            <h6>
+              <span id="time">{props.time}</span> -{" "}
+              <span id="hours">{props.previous}</span>
+            </h6>
+          )}
         </section>
       </div>
     </main>

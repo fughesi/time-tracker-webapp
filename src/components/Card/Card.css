@@ -43,15 +43,15 @@
   font-size: var(--step--2);
 }
 
-/* #Ellipsis {
-  fill: green;
+#Ellipsis {
+  fill: var(--pale);
+  width: 30px;
+  height: 10px;
 }
 
 #Ellipsis:hover {
-  fill: green;
-  color: #fff;
-  transform: scale(1.5);
-} */
+  fill: white;
+}
 
 #cardTop {
   grid-area: a;
@@ -75,9 +75,9 @@
 #cardBottom {
   grid-area: b;
 
-  height: 100%;
   width: 100%;
   padding: 1.5rem;
+  border-radius: 10px 10px 0 0;
 }
 
 #cardContainer {
@@ -86,7 +86,6 @@
   align-items: baseline;
 
   justify-content: space-between;
-  border-radius: 10px 10px 0 0;
 }
 
 #valueContainer h1 {
